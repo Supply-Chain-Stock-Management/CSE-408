@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width='44' height='43' viewBox='0 0 44 43' fill='none' xmlns='http://www.w3.org/2000/svg'>
+<mask id='mask0_48_351' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='1' y='2' width='41' height='40'>
+<path fill-rule='evenodd' clip-rule='evenodd' d='M30.1631 3.97995C29.055 2.0606 26.5888 1.39734 24.7535 2.63975C14.5786 9.52778 6.63056 19.4569 2.21449 31.1222C1.41526 33.2334 2.69276 35.5113 4.87325 36.0956L26.2718 41.8293C28.3123 42.376 30.401 41.226 31.3202 39.3239C33.3312 35.1627 36.2748 31.5366 39.8797 28.7169C41.6098 27.3638 42.2712 24.9517 41.173 23.0496L30.1631 3.97995Z' fill='url(#paint0_linear_48_351)'/>
+</mask>
+<g mask='url(#mask0_48_351)'>
+<path fill-rule='evenodd' clip-rule='evenodd' d='M30.1631 3.97995C29.055 2.0606 26.5888 1.39734 24.7535 2.63975C14.5786 9.52778 6.63056 19.4569 2.21449 31.1222C1.41526 33.2334 2.69276 35.5113 4.87325 36.0956L26.2718 41.8293C28.3123 42.376 30.401 41.226 31.3202 39.3239C33.3312 35.1627 36.2748 31.5366 39.8797 28.7169C41.6098 27.3638 42.2712 24.9517 41.173 23.0496L30.1631 3.97995Z' fill='#A1E3CB'/>
+</g>
+<defs>
+<linearGradient id='paint0_linear_48_351' x1='43.1567' y1='0.5' x2='30.6506' y2='21.8879' gradientUnits='userSpaceOnUse'>
+<stop/>
+<stop offset='1'/>
+</linearGradient>
+</defs>
+</svg>
