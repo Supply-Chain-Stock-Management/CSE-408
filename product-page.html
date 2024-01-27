@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>Product-Page</title>
+    <meta property="og:title" content="Product-Page - exported project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {
+        line-height: 1.15;
+      }
+      body {
+        margin: 0;
+      }
+      * {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+      }
+      p,
+      li,
+      ul,
+      pre,
+      div,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      figure,
+      blockquote,
+      figcaption {
+        margin: 0;
+        padding: 0;
+      }
+      button {
+        background-color: transparent;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      [type="button"],
+      [type="reset"],
+      [type="submit"] {
+        -webkit-appearance: button;
+      }
+      button::-moz-focus-inner,
+      [type="button"]::-moz-focus-inner,
+      [type="reset"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      button:-moz-focus,
+      [type="button"]:-moz-focus,
+      [type="reset"]:-moz-focus,
+      [type="submit"]:-moz-focus {
+        outline: 1px dotted ButtonText;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      input {
+        padding: 2px 4px;
+      }
+      img {
+        display: block;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="css/style.css" />
+    <div>
+      <link href="css/product-page.css" rel="stylesheet" />
+
+      <div class="product-page-container">
+        <div class="product-page-product-view">
+          <div class="product-page-sidebar">
+            <div class="product-page-frame">
+              <div class="product-page-namebadge">
+                <div class="product-page-bye-wind">
+                  <div class="product-page-icon-set">
+                    <div class="product-page-bye-wind1">
+                      <div class="product-page-frame1"></div>
+                    </div>
+                  </div>
+                  <div class="product-page-text">
+                    <span class="product-page-text001 14Regular">
+                      <span>JARIF ISLAM</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-page-frame2">
+              <div class="product-page-text003">
+                <span class="product-page-text004 14Regular">
+                  <span>Dashboards</span>
+                </span>
+              </div>
+              <div class="product-page-content">
+                <div class="product-page-icon-set01"></div>
+                <div class="product-page-icon-text">
+                  <div class="product-page-icon-set02">
+                    <img
+                      alt="ChartPieSliceI201"
+                      src="public/external/chartpieslicei201-5wl8.svg"
+                      class="product-page-chart-pie-slice"
+                    />
+                  </div>
+                  <div class="product-page-text006">
+                    <span class="product-page-text007 14Regular">
+                      <span>Overview</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-page-content1">
+                <div class="product-page-icon-text01">
+                  <div class="product-page-icon-set03">
+                    <img
+                      alt="ShoppingBagOpenI201"
+                      src="public/external/shoppingbagopeni201-yiw.svg"
+                      class="product-page-shopping-bag-open"
+                    />
+                  </div>
+                  <div class="product-page-text009">
+                    <span class="product-page-text010 14Regular">
+                      <span>Sales</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-page-content2">
+                <div class="product-page-icon-text02">
+                  <div class="product-page-icon-set04">
+                    <img
+                      alt="FolderNotchI201"
+                      src="public/external/foldernotchi201-4tu.svg"
+                      class="product-page-folder-notch"
+                    />
+                  </div>
+                  <div class="product-page-text012">
+                    <span class="product-page-text013 14Regular">
+                      <span>Shipment</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-page-frame3">
+              <div class="product-page-text015">
+                <span class="product-page-text016 14Regular">
+                  <span>Pages</span>
+                </span>
+              </div>
+              <div class="product-page-content3">
+                <div class="product-page-icon-set05">
+                  <img
+                    alt="ArrowLineRightI201"
+                    src="public/external/arrowlinerighti201-r3ij.svg"
+                    class="product-page-arrow-line-right"
+                  />
+                </div>
+                <div class="product-page-icon-text03">
+                  <div class="product-page-icon-set06">
+                    <img
+                      alt="IdentificationBadgeI201"
+                      src="public/external/identificationbadgei201-ut0j.svg"
+                      class="product-page-identification-badge"
+                    />
+                  </div>
+                  <div class="product-page-text018">
+                    <span class="product-page-text019 14Regular">
+                      <span><a href="stock.html">Stock</a></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-page-content4">
+                <div class="product-page-icon-set07">
+                  <img
+                    alt="ArrowLineRightI201"
+                    src="public/external/arrowlinerighti201-fz7o.svg"
+                    class="product-page-arrow-line-right1"
+                  />
+                </div>
+                <div class="product-page-icon-text04">
+                  <div class="product-page-icon-set08">
+                    <img
+                      alt="IdentificationCardI201"
+                      src="public/external/identificationcardi201-n5oq.svg"
+                      class="product-page-identification-card"
+                    />
+                  </div>
+                  <div class="product-page-text021">
+                    <span class="product-page-text022 14Regular">
+                      <span><a href="crate-po.html">Create PO</a></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-page-content5">
+                <div class="product-page-icon-set09">
+                  <img
+                    alt="ArrowLineRightI201"
+                    src="public/external/arrowlinerighti201-m21u.svg"
+                    class="product-page-arrow-line-right2"
+                  />
+                </div>
+                <div class="product-page-icon-text05">
+                  <div class="product-page-icon-set10">
+                    <img
+                      alt="NotebookI201"
+                      src="public/external/notebooki201-bjko.svg"
+                      class="product-page-notebook"
+                    />
+                  </div>
+                  <div class="product-page-text024">
+                    <span class="product-page-text025 14Regular">
+                      <span>Shipment</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-page-logo"></div>
+          </div>
+          <!--Overall product inventory-->
+          <div class="product-page-overall-inventory">
+            <div class="topnav">
+              <form>
+                <input
+                  style="width: 80%"
+                  type="text"
+                  placeholder="Search the product"
+                />
+                <input class="submit-cls" type="submit" name="Search" />
+              </form>
+            </div>
+
+            <!--Overall info-->
+            <div class="overall-info-quan">
+              <span class="SubheadingMedium">
+                <span>Overall Inventory</span>
+              </span>
+              <img
+                alt="Line102016"
+                src="public/external/line102016-md.svg"
+                class="product-page-line10"
+              />
+              <img
+                alt="Line112016"
+                src="public/external/line112016-48zr.svg"
+                class="product-page-line11"
+              />
+              <div class="product-page-frame87">
+                <span class="product-page-text099 Body1SemiBold">
+                  <span>Expiring Soon</span>
+                </span>
+                <div class="product-page-frame84">
+                  <span class="product-page-text101 Body1SemiBold">
+                    <span>12</span>
+                  </span>
+                  <span class="product-page-text103 Body1SemiBold">
+                    <span>335</span>
+                  </span>
+                </div>
+                <div class="product-page-frame85">
+                  <span class="product-page-text105 Body2Regular">
+                    <span>Materials</span>
+                  </span>
+                </div>
+                <span class="product-page-text107 Body2Regular">
+                  <span>CS/BS</span>
+                </span>
+              </div>
+              <div class="product-page-frame79">
+                <span class="product-page-text109 Body1SemiBold">
+                  <span>Total Products</span>
+                </span>
+                <div class="product-page-frame78">
+                  <div class="product-page-frame76">
+                    <span class="product-page-text111 Body1SemiBold">
+                      <span>95258</span>
+                    </span>
+                    <span class="product-page-text113 Body1SemiBold">
+                      <span>887,96,255</span>
+                    </span>
+                  </div>
+                </div>
+                <span class="product-page-text115 Body2Regular">
+                  <span>CS/BS</span>
+                </span>
+                <span class="product-page-text117 Body2Regular">
+                  <span>Total Value</span>
+                </span>
+              </div>
+              <div class="product-page-frame75">
+                <span class="product-page-text119 Body1SemiBold">
+                  <span>Storage Location</span>
+                </span>
+                <span class="product-page-text121 Body1SemiBold">
+                  <span>14</span>
+                </span>
+                <span class="product-page-text123 Body2Regular">
+                  <span>Sheds</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!--Overall pro ends-->
+
+          <!--Product info-->
+          <div class="product-info">
+            <img
+              alt="pureitclassicgermkillkit3000ltrremovebgpreview12016"
+              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/628df12b-4c68-4326-94f0-06f8fb184a44/4209c702-c3ed-40c3-bbf3-8db29253d09c?org_if_sml=1162360&amp;force_format=original"
+              class="product-page-pureitclassicgermkillkit3000ltrremovebgpreview1"
+              id="product-image"
+            />
+
+            <form action="" method="post">
+              <button
+                class="product-page-button-style2-shadow"
+                name="back"
+                value="Back"
+              >
+                Back
+              </button>
+            </form>
+
+            <form action="" method="post">
+              <button
+                class="product-page-button-style2-shadow1"
+                name="add-po"
+                value="Addto-PO"
+              >
+                Add to PO
+              </button>
+            </form>
+
+            <div class="product-page-base">
+              <span class="product-page-text207"><span>Brand</span></span>
+              <form action="/url" method="GET">
+                <input
+                  type="text"
+                  id="brand"
+                  name="Brand-Name"
+                  class="product-page-base127"
+                  style="border: 1px; border-color: darkgray; padding: 5px"
+                />
+              </form>
+            </div>
+            <div class="product-page-base1">
+              <span class="product-page-text207"><span>Unit MRP</span></span>
+              <form action="/url" method="GET">
+                <input
+                  type="text"
+                  id="unit-price"
+                  name="Unit-MRP"
+                  class="product-page-base127"
+                  style="border: 1px; border-color: darkgray; padding: 5px"
+                />
+              </form>
+            </div>
+            <div class="product-page-base2">
+              <span class="product-page-text207"><span>Size</span></span>
+              <form action="/url" method="GET">
+                <input
+                  type="text"
+                  id="size"
+                  name="Size-litre"
+                  class="product-page-base127"
+                  style="border: 1px; border-color: darkgray; padding: 5px"
+                />
+              </form>
+            </div>
+            <div class="product-page-base3">
+              <span class="product-page-text207"><span>Product</span> </span>
+              <form action="/url" method="GET">
+                <input
+                  type="text"
+                  id="product-name"
+                  name="product-Name"
+                  class="product-page-base127"
+                  style="border: 1px; border-color: darkgray; padding: 5px"
+                />
+              </form>
+            </div>
+            <div class="product-page-somedatacard1">
+              <span class="product-page-text215">
+                <span>Available In Stock</span>
+              </span>
+              <form action="/url" method="GET">
+                <input
+                  type="text"
+                  id="avail"
+                  name="availability"
+                  class="product-page-text127"
+                />
+              </form>
+            </div>
+            <div class="product-page-somedatacard">
+              <span class="product-page-text125"><span>Total Value</span></span>
+              <form action="/url" method="GET">
+                <input
+                  type="text"
+                  id="totalVal"
+                  name="total-value"
+                  class="product-page-text127"
+                  style="background-color: rgb(247, 246, 245)"
+                />
+              </form>
+            </div>
+            <div class="product-page-card">
+              <button class="product-page-button8">
+                <div class="product-page-text129">
+                  <span class="product-page-text130 12Regular">
+                    <span>Last Week</span>
+                  </span>
+                </div>
+                <div class="product-page-icon-set2">
+                  <img
+                    alt="ArrowLineDownI201"
+                    src="public/external/arrowlinedowni201-av5l.svg"
+                    class="product-page-arrow-line-down"
+                  />
+                </div>
+              </button>
+              <div class="product-page-content7">
+                <div class="product-page-text132">
+                  <span class="product-page-text133 12Regular">
+                    <span>Unit Sold</span>
+                  </span>
+                </div>
+              </div>
+              <div class="product-page-content8">
+                <div class="product-page-icon-text11">
+                  <div class="product-page-text204">
+                    <span class="product-page-text205 12Regular">
+                      <span
+                        ><form action="/url" method="GET">
+                          <input
+                            type="text"
+                            id="lastWeekUnitSold"
+                            name="last-week-unit-sold"
+                            class="product-page-text127"
+                          /></form
+                      ></span>
+                    </span>
+                  </div>
+                  <div class="product-page-icon-set22">
+                    <img
+                      alt="ArrowRiseI201"
+                      src="public/external/arrowrisei201-vxyp.svg"
+                      class="product-page-arrow-rise"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Product info ends-->
+
+          <!-- Right side barrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr-->
+          <div class="product-page-right-bar">
+            <div class="product-page-frame4">
+              <div class="product-page-content6">
+                <div class="product-page-text027">
+                  <span class="product-page-text028 14Regular">
+                    <span>Notifications</span>
+                  </span>
+                </div>
+              </div>
+              <div class="product-page-icon-text06">
+                <div class="product-page-icon-set11">
+                  <img
+                    alt="BugBeetleI201"
+                    src="public/external/bugbeetlei201-fgcvq.svg"
+                    class="product-page-bug-beetle"
+                  />
+                </div>
+                <div class="product-page-text030">
+                  <span class="product-page-text031 14Regular">
+                    <span>Shipment to Dhaka departed</span>
+                  </span>
+                  <span class="product-page-text033 12Regular">
+                    <span>Just now</span>
+                  </span>
+                </div>
+              </div>
+              <div class="product-page-icon-text07">
+                <div class="product-page-icon-set12">
+                  <img
+                    alt="UserI201"
+                    src="public/external/useri201-9f95.svg"
+                    class="product-page-user"
+                  />
+                </div>
+                <div class="product-page-text035">
+                  <span class="product-page-text036 14Regular">
+                    <span>LUX 50g Arrived in Factory</span>
+                  </span>
+                  <span class="product-page-text038 12Regular">
+                    <span>59 minutes ago</span>
+                  </span>
+                </div>
+              </div>
+              <div class="product-page-icon-text08">
+                <div class="product-page-icon-set13">
+                  <img
+                    alt="BugBeetleI201"
+                    src="public/external/bugbeetlei201-2l4c.svg"
+                    class="product-page-bug-beetle1"
+                  />
+                </div>
+                <div class="product-page-text040">
+                  <span class="product-page-text041 14Regular">
+                    <span>Shipment to Bogra departed</span>
+                  </span>
+                  <span class="product-page-text043 12Regular">
+                    <span>12 hours ago</span>
+                  </span>
+                </div>
+              </div>
+              <div class="product-page-icon-text09">
+                <div class="product-page-icon-set14">
+                  <img
+                    alt="BroadcastI201"
+                    src="public/external/broadcasti201-d3dd.svg"
+                    class="product-page-broadcast"
+                  />
+                </div>
+                <div class="product-page-text045">
+                  <span class="product-page-text046 14Regular">
+                    <span>Barishal requested shipment</span>
+                  </span>
+                  <span class="product-page-text048 12Regular">
+                    <span>Today, 11:59 AM</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Right side barrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr ends-->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
