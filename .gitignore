@@ -3,10 +3,7 @@ inventory_management/node_modules
 X509-cert-8379656237372897810.pem
 DB.md
 inventory_management/Dockerfile
-inventory_management/connectMongo.py
 inventory_management/package-lock.json
 inventory_management/package.json
-inventory_management/populateFromExcel.py
-inventory_management/populateProduct.py
 inventory_management/ubl-products.xlsx
 inventory_management/X509-cert-8379656237372897810.pem
