@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>Stock - exported project</title>
+    <title>Stock</title>
     <meta property="og:title" content="Stock - exported project" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -481,520 +481,385 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
+    <script src="js/stock.js"></script>
   </head>
+  
   <body>
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css"
+rel="stylesheet"
+/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    
     <link rel="stylesheet" href="css/style.css" />
+    <link href="css/stock.css" rel="stylesheet" />
     <div>
-      <link href="css/stock.css" rel="stylesheet" />
+      <link href="css/shipment.css" rel="stylesheet" />
+      <link href="css/dashboard.css" rel="stylesheet" />
 
-      <div class="stock-container">
-        <div class="stock-stock">
-          <div class="stock-sidebar">
-            <div class="stock-frame">
-              <div class="stock-namebadge">
-                <div class="stock-bye-wind">
-                  <div class="stock-icon-set">
-                    <div class="stock-bye-wind1">
-                      <div class="stock-frame1"></div>
+
+
+
+        <!--POP UP Add product card-->
+
+    <div id="addCard" class="container" style="position: fixed;width: 40%; margin-left: 30%; margin-top: 12%;
+    height: 80%;
+    z-index:99; align-content: center; visibility: hidden;">
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Add Product</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Fill up the info</h6>
+          <form>
+            <div class="form-group" style="margin-bottom: 2%;">
+              <label for="pro-name">Choose a product:</label>
+
+            <select name="products" id="products">
+              <option value="lux">LUX</option>
+              <option value="wheel">WHEEL</option>
+              <option value="surf">SURF Excel</option>
+            </select>
+            </div>
+            <div class="form-group" style="margin-bottom: 2%;">
+              <label for="quantity">Quantity</label>
+              <input type="number" class="form-control" id="quantity">
+            </div>
+            
+            <button type="submit" class="btn btn-primary" onclick="resetNow()">Add</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!--Card ends here-->
+
+
+
+        <div id="mainPage" class="row">
+
+        <div class="col-sm sidebar">
+            <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                  <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                  <span class="fs-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 20 20">
+                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>JARIF ISLAM
+                  </span>
+                  
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <p class="text-center font-weight-light" style="font-weight: lighter;">Dashboards</p>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link link-dark sideLink" aria-current="page">
+                      <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                      Overview
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link link-dark">
+                      <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                      Sales
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link link-dark">
+                      <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                      Shipment
+                    </a>
+                  </li>
+                  <p class="text-center font-weight-light" style="font-weight: lighter;">Pages</p>
+                  <li>
+                    <a href="#" class="nav-link link-dark">
+                      <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                      Stock
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link link-dark">
+                      <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+                      Serve Request
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link link-dark">
+                      <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                      Shipment
+                    </a>
+                  </li>
+                </ul>
+                <hr>
+                
+              </div>
+        </div>
+
+        
+        <div class="col-6" style="margin-left: -1%; margin-top: 1%;">
+          <h4>Overall Inventory</h4>
+          <div class="container">
+
+            <div class="row">
+
+              
+
+              <div class="card bg-light" style="width: 25%; margin-left: 2%;">
+                <div class="card-body">
+                  <h5 class="text-primary">Storage Location</h5>
+                  <h6 class="card-subtitle mb-2">14</h6>
+                  <p class="card-title text-muted">Shreds</p>
+               </div>
+              </div>
+
+
+              <div class="card bg-light" style="width: 35%; margin-left: 2%;">
+                <div class="card-body">
+                  <div class="row">
+                    <h5 class="text-primary">Total Products</h5>
+                  <div class="col"><h6 class="card-subtitle mb-2 text-dark" style="margin-top: 20%;">95258</h6>
+                    <p class="card-title text-muted">CS/BS</p>
+                  </div>
+                  <div class="col"><h6 class="card-subtitle mb-2 text-dark" style="margin-top: 20%;">887,96,255</h6>
+                    <p class="card-title text-muted">Total Value</p>
+                  </div>
+                  </div>
+                  
+               </div>
+              </div>
+
+
+              <div class="card bg-light" style="width: 33%; margin-left: 2%;">
+                <div class="card-body">
+                  <div class="row">
+                    <h5 class="text-primary text-danger">Expiring Soon</h5>
+                  <div class="col"><h6 class="card-subtitle mb-2 text-dark" style="margin-top: 20%;">12</h6>
+                    <p class="card-title text-muted">Materials</p>
+                  </div>
+                  <div class="col"><h6 class="card-subtitle mb-2 text-dark" style="margin-top: 20%;">335</h6>
+                    <p class="card-title text-muted">CS/BS</p>
+                  </div>
+                  </div>
+                  
+               </div>
+              </div>
+
+
+
+
+            </div>
+
+            <div class="row justify-content-md-center" style="margin-top: 17%; width: 80vw;">
+
+              <div>
+
+                <table class="table tableInfo text-justify text-center table-bordered" style="margin-left: -5%;">
+                  <tr>
+                    <div style="margin-left: -3%;"><span style="font-weight: bold; font-size: large;">Products</span>
+                      <button type="button" class="btn  btn-outline-secondary" style="margin-left: 2%; margin-top: 2%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-filter" viewBox="0 0 20 20">
+                          <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                        Filter</button>
+                        <button type="button" class="btn btn-primary" style=" margin-top: 2%; margin-left: 1%;">
+                          
+                          Download</button>
+            
+                            <button type="button" class="btn btn-primary" style=" margin-top: 2%; margin-left: 1%;" onclick="addProShow()">
+                              Add
+                            </button>
+                            
                     </div>
-                  </div>
-                  <div class="stock-text">
-                    <span class="stock-text001 14Regular">
-                      <span>JARIF ISLAM</span>
-                    </span>
-                  </div>
-                </div>
+                    
+                  </tr>
+                <thead>
+                  <tr>
+                    <th scope="col text-center">Material</th>
+                    <th scope="col text-center">Product</th>
+                    <th scope="col text-center">Base Unit</th>
+                    <th scope="col text-center">Available</th>
+                    <th scope="col text-center">Unrestricted</th>
+                    <th scope="col text-center">In Transit</th>
+                    <th scope="col text-center">In QC</th>
+                    <th scope="col text-center">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+  
+                  <tr class="table-light">
+                    <td class="text-info">20091436</td>
+                    <td>PUREIT-MOS POLARSHIP CAP</td>
+                    <td>CS</td>
+                    <td>1748</td>
+                    <td>1327</td>
+                    <td>237</td>
+                    <td>5</td>
+                    <td>255,1517</td>
+                  </tr>
+  
+                  <tr class="table-light">
+                    <td class="text-info">69991432</td>
+                    <td>DOV-CONDITIONER ISHP CHILD</td>
+                    <td>CS</td>
+                    <td>3527</td>
+                    <td>2875</td>
+                    <td>530</td>
+                    <td>0</td>
+                    <td>371.2</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+
               </div>
+
+
+
             </div>
-            <div class="stock-frame2">
-              <div class="stock-text003">
-                <span class="stock-text004 14Regular">
-                  <span><a href="dashboard.html">Dashboards</a></span>
-                </span>
-              </div>
-              <div class="stock-content">
-                <div class="stock-icon-set01"></div>
-                <div class="stock-icon-text">
-                  <div class="stock-icon-set02">
-                    <img
-                      alt="ChartPieSliceI201"
-                      src="public/external/chartpieslicei201-yvjo.svg"
-                      class="stock-chart-pie-slice"
-                    />
-                  </div>
-                  <div class="stock-text006">
-                    <span class="stock-text007 14Regular">
-                      <span>Overview</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="stock-content1">
-                <div class="stock-icon-text01">
-                  <div class="stock-icon-set03">
-                    <img
-                      alt="ShoppingBagOpenI201"
-                      src="public/external/shoppingbagopeni201-89y.svg"
-                      class="stock-shopping-bag-open"
-                    />
-                  </div>
-                  <div class="stock-text009">
-                    <span class="stock-text010 14Regular">
-                      <span>Sales</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="stock-content2">
-                <div class="stock-icon-text02">
-                  <div class="stock-icon-set04">
-                    <img
-                      alt="FolderNotchI201"
-                      src="public/external/foldernotchi201-sghd.svg"
-                      class="stock-folder-notch"
-                    />
-                  </div>
-                  <div class="stock-text012">
-                    <span class="stock-text013 14Regular">
-                      <span>Shipment</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="stock-frame3">
-              <div class="stock-text015">
-                <span class="stock-text016 14Regular"><span>Pages</span></span>
-              </div>
-              <div class="stock-content3">
-                <div class="stock-icon-set05">
-                  <img
-                    alt="ArrowLineRightI201"
-                    src="public/external/arrowlinerighti201-a67.svg"
-                    class="stock-arrow-line-right"
-                  />
-                </div>
-                <div class="stock-icon-text03">
-                  <div class="stock-icon-set06">
-                    <img
-                      alt="IdentificationBadgeI201"
-                      src="public/external/identificationbadgei201-c9x.svg"
-                      class="stock-identification-badge"
-                    />
-                  </div>
-                  <div class="stock-text018">
-                    <span class="stock-text019 14Regular">
-                      <span><a href="stock.html">Stock</a></span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="stock-content4">
-                <div class="stock-icon-set07">
-                  <img
-                    alt="ArrowLineRightI201"
-                    src="public/external/arrowlinerighti201-ef7.svg"
-                    class="stock-arrow-line-right1"
-                  />
-                </div>
-                <div class="stock-icon-text04">
-                  <div class="stock-icon-set08">
-                    <img
-                      alt="IdentificationCardI201"
-                      src="public/external/identificationcardi201-k2qk.svg"
-                      class="stock-identification-card"
-                    />
-                  </div>
-                  <div class="stock-text021">
-                    <span class="stock-text022 14Regular">
-                      <span><a href="crate-po.html">Create PO</a></span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="stock-content5">
-                <div class="stock-icon-set09">
-                  <img
-                    alt="ArrowLineRightI201"
-                    src="public/external/arrowlinerighti201-mduh.svg"
-                    class="stock-arrow-line-right2"
-                  />
-                </div>
-                <div class="stock-icon-text05">
-                  <div class="stock-icon-set10">
-                    <img
-                      alt="NotebookI201"
-                      src="public/external/notebooki201-ceb.svg"
-                      class="stock-notebook"
-                    />
-                  </div>
-                  <div class="stock-text024">
-                    <span class="stock-text025 14Regular">
-                      <span>Shipment</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="stock-logo"></div>
+
+            
+
           </div>
+          
+        </div>
 
-          <!--Overall product inventory-->
-          <div class="container-overall">
-            <div class="product-page-overall-inventory">
-              <div class="topnav">
-                <form>
-                  <input
-                    style="width: 80%"
-                    type="text"
-                    placeholder="Search the product"
-                  />
-                  <input class="submit-cls" type="submit" name="Search" />
-                </form>
-              </div>
 
-              <!--Overall info-->
-              <div class="overall-info-quan">
-                <span class="SubheadingMedium">
-                  <span>Overall Inventory</span>
-                </span>
-                <img
-                  alt="Line102016"
-                  src="public/external/line102016-md.svg"
-                  class="product-page-line10"
-                />
-                <img
-                  alt="Line112016"
-                  src="public/external/line112016-48zr.svg"
-                  class="product-page-line11"
-                />
-                <div class="product-page-frame87">
-                  <span class="product-page-text099 Body1SemiBold">
-                    <span>Expiring Soon</span>
-                  </span>
-                  <div class="product-page-frame84">
-                    <span class="product-page-text101 Body1SemiBold">
-                      <span>12</span>
-                    </span>
-                    <span class="product-page-text103 Body1SemiBold">
-                      <span>335</span>
-                    </span>
-                  </div>
-                  <div class="product-page-frame85">
-                    <span class="product-page-text105 Body2Regular">
-                      <span>Materials</span>
-                    </span>
-                  </div>
-                  <span class="product-page-text107 Body2Regular">
-                    <span>CS/BS</span>
-                  </span>
-                </div>
-                <div class="product-page-frame79">
-                  <span class="product-page-text109 Body1SemiBold">
-                    <span>Total Products</span>
-                  </span>
-                  <div class="product-page-frame78">
-                    <div class="product-page-frame76">
-                      <span class="product-page-text111 Body1SemiBold">
-                        <span>95258</span>
-                      </span>
-                      <span class="product-page-text113 Body1SemiBold">
-                        <span>887,96,255</span>
-                      </span>
-                    </div>
-                  </div>
-                  <span class="product-page-text115 Body2Regular">
-                    <span>CS/BS</span>
-                  </span>
-                  <span class="product-page-text117 Body2Regular">
-                    <span>Total Value</span>
-                  </span>
-                </div>
-                <div class="product-page-frame75">
-                  <span class="product-page-text119 Body1SemiBold">
-                    <span>Storage Location</span>
-                  </span>
-                  <span class="product-page-text121 Body1SemiBold">
-                    <span>14</span>
-                  </span>
-                  <span class="product-page-text123 Body2Regular">
-                    <span>Sheds</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--Overall pro ends-->
 
-          <div class="stock-right-bar">
-            <div class="stock-frame4">
-              <div class="stock-content6">
-                <div class="stock-text027">
-                  <span class="stock-text028 14Regular">
-                    <span>Notifications</span>
-                  </span>
+        <div class="col" style="position: relative; width:100%; margin-left: 3%;">
+          
+
+          <div class="container align-items-stretch">
+            <a href="/" class="d-flex flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+              <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="35" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 20 20">
+                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+              </svg>
+              <span class="fs-5 fw-semibold">Notifications</span>
+            </a>
+            <div class="list-group list-group-flush border-bottom scrollarea" style=" height:35vh; overflow-y: scroll;">
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">Shipment to Dhaka departed</strong>
+                  <small>Just Now</small>
                 </div>
-              </div>
-              <div class="stock-icon-text06">
-                <div class="stock-icon-set11">
-                  <img
-                    alt="BugBeetleI201"
-                    src="public/external/bugbeetlei201-qtg.svg"
-                    class="stock-bug-beetle"
-                  />
+                <div class="col-10 mb-1 small">Request from M/S copp was accepted and it is enroute</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Tues</small>
                 </div>
-                <div class="stock-text030">
-                  <span class="stock-text031 14Regular">
-                    <span>Shipment to Dhaka departed</span>
-                  </span>
-                  <span class="stock-text033 12Regular">
-                    <span>Just now</span>
-                  </span>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Mon</small>
                 </div>
-              </div>
-              <div class="stock-icon-text07">
-                <div class="stock-icon-set12">
-                  <img
-                    alt="UserI201"
-                    src="public/external/useri201-2291.svg"
-                    class="stock-user"
-                  />
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+        
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Wed</small>
                 </div>
-                <div class="stock-text035">
-                  <span class="stock-text036 14Regular">
-                    <span>LUX 50g Arrived in Factory</span>
-                  </span>
-                  <span class="stock-text038 12Regular">
-                    <span>59 minutes ago</span>
-                  </span>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Tues</small>
                 </div>
-              </div>
-              <div class="stock-icon-text08">
-                <div class="stock-icon-set13">
-                  <img
-                    alt="BugBeetleI201"
-                    src="public/external/bugbeetlei201-v8na.svg"
-                    class="stock-bug-beetle1"
-                  />
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Mon</small>
                 </div>
-                <div class="stock-text040">
-                  <span class="stock-text041 14Regular">
-                    <span>Shipment to Bogra departed</span>
-                  </span>
-                  <span class="stock-text043 12Regular">
-                    <span>12 hours ago</span>
-                  </span>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Wed</small>
                 </div>
-              </div>
-              <div class="stock-icon-text09">
-                <div class="stock-icon-set14">
-                  <img
-                    alt="BroadcastI201"
-                    src="public/external/broadcasti201-66mw.svg"
-                    class="stock-broadcast"
-                  />
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Tues</small>
                 </div>
-                <div class="stock-text045">
-                  <span class="stock-text046 14Regular">
-                    <span>Barishal requested shipment</span>
-                  </span>
-                  <span class="stock-text048 12Regular">
-                    <span>Today, 11:59 AM</span>
-                  </span>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Mon</small>
                 </div>
-              </div>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Wed</small>
+                </div>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Tues</small>
+                </div>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Mon</small>
+                </div>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
             </div>
           </div>
 
-          <div class="stock-frame88">
-            <button class="stock-frame-buttonbase">
-              <span class="stock-text125 Body2Medium">
-                <span>Download all</span>
-              </span>
-            </button>
 
-            <button class="stock-frame-buttonbase1">
-              <img
-                alt="Filterslines2014"
-                src="public/external/filterslines2014-1ipm.svg"
-                class="stock-filterslines"
-              />
-              <span class="stock-text127 TextsmMedium">
-                <span>Filters</span>
-              </span>
-            </button>
 
-            <span class="stock-text129 Body2Medium"><span>Material</span></span>
-            <span class="stock-text131 Body2Medium"><span>Product</span></span>
-            <span class="stock-text133 Body2Medium"><span>69993141</span></span>
-            <span class="stock-text135 Body2Medium">
-              <span>DOVE CONDITIONER IRP CHILD V2 24X50ML</span>
-            </span>
-            <span class="stock-text137 Body2Medium"><span>1748</span></span>
-            <span class="stock-text139 Body2Medium"><span>1327</span></span>
-            <span class="stock-text141 Body2Medium"><span>237</span></span>
-            <span class="stock-text143 Body2Medium">5</span>
-            <span class="stock-text144 Body2Medium"><span>255.1517</span></span>
-            <span class="stock-text146 Body2Medium"><span>371.208</span></span>
-            <span class="stock-text148 Body2Medium"><span>1498.88</span></span>
-            <span class="stock-text150 Body2Medium"><span>1355.94</span></span>
-            <span class="stock-text152 Body2Medium"><span>784.63</span></span>
-            <span class="stock-text154 Body2Medium"><span>507.3997</span></span>
-            <span class="stock-text156 Body2Medium"><span>284.1767</span></span>
-            <span class="stock-text158 Body2Medium"><span>507.3997</span></span>
-            <span class="stock-text160 Body2Medium"><span>1017.15</span></span>
-            <span class="stock-text162 Body2Medium"><span>2875</span></span>
-            <span class="stock-text164 Body2Medium">0</span>
-            <span class="stock-text165 Body2Medium"><span>1747</span></span>
-            <span class="stock-text167 Body2Medium"><span>976</span></span>
-            <span class="stock-text169 Body2Medium"><span>662</span></span>
-            <span class="stock-text171 Body2Medium"><span>1124</span></span>
-            <span class="stock-text173 Body2Medium">0</span>
-            <span class="stock-text174 Body2Medium">0</span>
-            <span class="stock-text175 Body2Medium"><span>3767</span></span>
-            <span class="stock-text177 Body2Medium"><span>287</span></span>
-            <span class="stock-text179 Body2Medium"><span>3812</span></span>
-            <span class="stock-text181 Body2Medium"><span>483</span></span>
-            <span class="stock-text183 Body2Medium"><span>235</span></span>
-            <span class="stock-text185 Body2Medium"><span>67</span></span>
-            <span class="stock-text187 Body2Medium"><span>245</span></span>
-            <span class="stock-text189 Body2Medium"><span>224</span></span>
-            <span class="stock-text191 Body2Medium"><span>568</span></span>
-            <span class="stock-text193 Body2Medium"><span>101</span></span>
-            <span class="stock-text195 Body2Medium">0</span>
-            <span class="stock-text196 Body2Medium">0</span>
-            <span class="stock-text197 Body2Medium">0</span>
-            <span class="stock-text198 Body2Medium">0</span>
-            <span class="stock-text199 Body2Medium">0</span>
-            <span class="stock-text200 Body2Medium"><span>530</span></span>
-            <span class="stock-text202 Body2Medium"><span>2308</span></span>
-            <span class="stock-text204 Body2Medium"><span>1239</span></span>
-            <span class="stock-text206 Body2Medium"><span>734</span></span>
-            <span class="stock-text208 Body2Medium"><span>4127</span></span>
-            <span class="stock-text210 Body2Medium"><span>1403</span></span>
-            <span class="stock-text212 Body2Medium"><span>4420</span></span>
-            <span class="stock-text214 Body2Medium"><span>398</span></span>
-            <span class="stock-text216 Body2Medium"><span>69583129</span></span>
-            <span class="stock-text218 Body2Medium">
-              <span>SUNSILK HFS CONDITIONER CHILD 24X50ML</span>
-            </span>
-            <span class="stock-text220 Body2Medium"><span>69713765</span></span>
-            <span class="stock-text222 Body2Medium">
-              <span>TRESEMME KS CONDITIONER CHILD 24X50ML</span>
-            </span>
-            <span class="stock-text224 Body2Medium"><span>69701043</span></span>
-            <span class="stock-text226 Body2Medium"><span>69673209</span></span>
-            <span class="stock-text228 Body2Medium">
-              <span>VIM HDW LQ SPT PRVCLM BSTI 25T 36X100ML</span>
-            </span>
-            <span class="stock-text230 Body2Medium"><span>68717526</span></span>
-            <span class="stock-text232 Body2Medium">
-              <span>LAKME EYECONIC KAJAL CP 12X0.35G</span>
-            </span>
-            <span class="stock-text234 Body2Medium"><span>68883731</span></span>
-            <span class="stock-text236 Body2Medium">
-              <span>VIM HD NSD BAR ICEHOCKEY NSP_15 72X125G</span>
-            </span>
-            <span class="stock-text238 Body2Medium"><span>21118859</span></span>
-            <span class="stock-text240 Body2Medium">
-              <span>PUREIT WP ULTIMA-PRV 1PC</span>
-            </span>
-            <span class="stock-text242 Body2Medium">
-              <span>Base Unit</span>
-            </span>
-            <span class="stock-text244 Body2Medium">
-              <span>Available</span>
-            </span>
-            <span class="stock-text246 Body2Medium">
-              <span>Unrestricted</span>
-            </span>
-            <span class="stock-text248 Body2Medium">
-              <span>In Transit</span>
-            </span>
-            <span class="stock-text250 Body2Medium"><span>In QC</span></span>
-            <span class="stock-text252 Body2Medium"><span>Price</span></span>
-            <img
-              alt="Vector402014"
-              src="public/external/vector402014-3hah.svg"
-              class="stock-vector40"
-            />
-            <img
-              alt="Vector412014"
-              src="public/external/vector412014-p65d.svg"
-              class="stock-vector41"
-            />
-            <img
-              alt="Vector422014"
-              src="public/external/vector422014-hiy.svg"
-              class="stock-vector42"
-            />
-            <img
-              alt="Vector432014"
-              src="public/external/vector432014-0y0a.svg"
-              class="stock-vector43"
-            />
-            <img
-              alt="Vector442014"
-              src="public/external/vector442014-ie6.svg"
-              class="stock-vector44"
-            />
-            <img
-              alt="Vector452014"
-              src="public/external/vector452014-bu18.svg"
-              class="stock-vector45"
-            />
-            <img
-              alt="Vector462014"
-              src="public/external/vector462014-lh57.svg"
-              class="stock-vector46"
-            />
-            <img
-              alt="Vector472014"
-              src="public/external/vector472014-f4is.svg"
-              class="stock-vector47"
-            />
-            <img
-              alt="Vector482014"
-              src="public/external/vector482014-mvr.svg"
-              class="stock-vector48"
-            />
-            <span class="stock-text254 SubheadingMedium">
-              <span>Products</span>
-            </span>
-            <span class="stock-text256 Body2Medium"><span>20091436</span></span>
-            <span class="stock-text258 Body2Medium">
-              <span>PUREIT-M05 POLSHR CAP ASSMBLY WITH O RNG</span>
-            </span>
-            <span class="stock-text260 Body2Medium"><span>CS</span></span>
-            <span class="stock-text262 Body2Medium"><span>CS</span></span>
-            <span class="stock-text264 Body2Medium"><span>CS</span></span>
-            <span class="stock-text266 Body2Medium"><span>CS</span></span>
-            <span class="stock-text268 Body2Medium"><span>CS</span></span>
-            <span class="stock-text270 Body2Medium"><span>CS</span></span>
-            <span class="stock-text272 Body2Medium"><span>CS</span></span>
-            <span class="stock-text274 Body2Medium"><span>CS</span></span>
-            <button class="stock-replace-button">
-              <span class="stock-text276 TextsmMedium"><span>Next</span></span>
-            </button>
-            <span class="stock-text278">
-              <span class="stock-text279">Page</span>
-              <span class="stock-text280">1</span>
-              <span class="stock-text281">of</span>
-              <span>10</span>
-            </span>
-            <button class="stock-replace-button1">
-              <span class="stock-text283 TextsmMedium">
-                <span>Previous</span>
-              </span>
-            </button>
-            <span class="stock-text285 Body2Medium"><span>3526</span></span>
-            <span class="stock-text287 Body2Medium"><span>CS</span></span>
-            <span class="stock-text289 Body2Medium">
-              <span>PUREIT GERMKILL KIT RL 1500L 800TK 1X1PC</span>
-            </span>
-          </div>
+        </div>
+
+
+
         </div>
       </div>
     </div>
+    </div>
+
+    
+    <script src="js/stock.js"></script>
   </body>
 </html>
