@@ -7,3 +7,10 @@ inventory_management/package-lock.json
 inventory_management/package.json
 inventory_management/ubl-products.xlsx
 inventory_management/X509-cert-8379656237372897810.pem
+order_management/node_modules
+node_modules
+order_management/db.md
+order_management/package-lock.json
+order_management/package.json
+order_management/config.env
+package.json
