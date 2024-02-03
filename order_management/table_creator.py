@@ -1,13 +1,14 @@
 import psycopg2
 from psycopg2 import sql
+from decouple import config
 
 # Database connection details
 db_params = {
-    'database': 'order',
-    'user': 'pg',
-    'password': '12345678',
-    'host': 'order.cj26q4cumd9h.ap-south-1.rds.amazonaws.com',
-    'port': 5432,
+    'dbname': config('DB_NAME'),
+    'user': config('DB_USER'),
+    'password': config('DB_PASSWORD'),
+    'host': config('DB_HOST'),
+    'port': config('DB_PORT'),
 }
 
 # Table creation queries
@@ -17,7 +18,7 @@ create_table_query = '''
                 user_id INTEGER NOT NULL,
                 product_id INTEGER NOT NULL,
                 quantity INTEGER NOT NULL,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
         '''
 
@@ -31,7 +32,7 @@ try:
     print('Tables created successfully.')
 except Exception as e:
     print('Error:', e)
-# finally:
-#     if conn:
-#         conn.close()
+finally:
+    if conn:
+        conn.close()
 print('Database connection closed.')
