@@ -13,4 +13,4 @@ order_management/db.md
 order_management/package-lock.json
 order_management/package.json
 order_management/config.env
-package.json
+order_management/config.js

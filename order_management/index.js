@@ -4,6 +4,10 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+
+
+
+
 // PostgreSQL configuration
 const pool = new Pool({
     user: process.env.DB_USER,
@@ -12,6 +16,19 @@ const pool = new Pool({
     password: process.env.DB_PASSWORD,
     port: process.env.DB_PORT,
   });
+  console.log(`from config ${process.env.DB_HOST}`);
+
+
+
+// const config = require('./config');
+
+// const pool = new Pool({database: config.database.DB_NAME,
+//     user: config.database.DB_USER,
+//     password: config.database.DB_PASSWORD,
+//     host: config.database.DB_HOST,
+//     port: config.database.DB_PORT
+// });
+
 
 // Test route for database connection
 app.get('/', async (req, res) => {
