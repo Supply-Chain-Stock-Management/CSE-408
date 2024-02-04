@@ -2,24 +2,17 @@
     
 
 const express = require('express')
+const { MongoClient } = require('mongodb')
 const {connectToDb,getDb} = require('./db', 'db.secondary')
 const path = require('path')
-const mongoose = require('mongoose')
 //init app
 const app = express()
+//const session = require('express-session')
+
 app.use(express.static(path.join(__dirname,'public')))
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
-
-const productSchema = new mongoose.Schema({
-    _id : Number,
-    productName : String,
-    quantity : Number,
-    unrestricted : Number,
-    inTransit : Number
-});
-
 
 // use res.render to load up an ejs view file
 
@@ -48,11 +41,14 @@ connectToDb((err) => {
 //convert collection to array
 app.get('/inventory',(req,res)=>{
     let products = []
-     db.collection('factoryInventory').find()
+     db.collection('products').find()
      .forEach(product =>products.push(product))
         .then(()=> {
             //res.status(200).json(products)
-            res.render('pages/inventory', {products: products});
+            res.render('stock',{
+                title: "Stock Page",
+                products: products,
+            })
         })
         .catch(()=>{
             res.status(500).json({error:"Couldn't fetch products"})
