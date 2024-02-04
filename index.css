@@ -1,0 +1,276 @@
+.logincontainer-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.logincontainer-logincontainer {
+  gap: 10px;
+  width: 1440px;
+  height: auto;
+  display: flex;
+  padding: 10px;
+  overflow: hidden;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 5px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 1);
+}
+.logincontainer-logindetails {
+  gap: 10px;
+  width: 479px;
+  height: 685px;
+  display: flex;
+  padding: 10px;
+  margin-left: 0%;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.logincontainer-inputcollection {
+  gap: 15px;
+  height: 530px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.logincontainer-unilever-logo {
+  gap: 10px;
+  width: 220px;
+  height: 281px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.logincontainer-image4 {
+  width: 220px;
+  height: 246px;
+}
+.logincontainer-group4 {
+  width: 410px;
+  height: 223px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.logincontainer-rectangle34 {
+  gap: 5px;
+  top: 15%;
+  left: 0px;
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.logincontainer-text {
+  color: rgba(16, 21, 63, 1);
+  height: auto;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.logincontainer-rectangle341 {
+  gap: 3px;
+  display: flex;
+  padding: 8px 8px;
+  width: 160%;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: rgba(143, 143, 143, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  background-color: rgba(237, 240, 242, 1);
+}
+.email-cls {
+  align-self: stretch;
+  align-items: center;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: rgba(237, 240, 242, 1);
+}
+.submit-cls {
+  border: none;
+  outline: none;
+  color: antiquewhite;
+  font-size: larger;
+  background-color: rgba(16, 21, 63, 1);
+}
+.logincontainer-text02 {
+  color: rgba(0, 0, 0, 0.6800000071525574);
+  height: auto;
+  font-size: 15px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.logincontainer-rectangle35 {
+  gap: 5px;
+  top: 50%;
+  left: 0px;
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.logincontainer-text04 {
+  color: rgba(16, 21, 63, 1);
+  height: auto;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.logincontainer-rectangle342 {
+  gap: 10px;
+  display: flex;
+  padding: 15px 10px;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: rgba(143, 143, 143, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  background-color: rgba(237, 240, 242, 1);
+}
+.logincontainer-text06 {
+  color: rgba(0, 0, 0, 0.6800000071525574);
+  height: auto;
+  font-size: 15px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.logincontainer-rectangle39 {
+  gap: 10px;
+  width: 410px;
+  top: -3%;
+  display: flex;
+  padding: 10px;
+  position: relative;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+.logincontainer-group3 {
+  width: 160px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.logincontainer-rectangle391 {
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+}
+.logincontainer-text08 {
+  left: 40px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.logincontainer-text10 {
+  color: rgba(16, 21, 63, 1);
+  height: auto;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.logincontainer-rectangle343 {
+  gap: 10px;
+  display: flex;
+  padding: 15px 10px;
+  align-self: stretch;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+  border-color: rgba(143, 143, 143, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  justify-content: center;
+  background-color: rgba(16, 21, 63, 1);
+}
+.logincontainer-text12 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 15px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.logincontainer-background-image {
+  gap: 10px;
+  display: flex;
+  padding: 10px;
+  width: 20%;
+  margin-left: 20%;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+}
+.logincontainer-image3 {
+  width: auto;
+  height: auto;
+  flex-grow: 1;
+  align-self: stretch;
+}
