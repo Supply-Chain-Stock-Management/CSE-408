@@ -51,7 +51,8 @@ app.get('/inventory',(req,res)=>{
      db.collection('factoryInventory').find()
      .forEach(product =>products.push(product))
         .then(()=> {
-            res.status(200).json(products)
+            //res.status(200).json(products)
+            res.render('pages/inventory', {products: products});
         })
         .catch(()=>{
             res.status(500).json({error:"Couldn't fetch products"})

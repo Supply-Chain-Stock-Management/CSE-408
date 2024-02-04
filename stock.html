@@ -708,13 +708,18 @@ rel="stylesheet"
                   </tr>
                 </thead>
                 <tbody>
-  
-                  <tr class="table-light">
-                    <script>
-                      //code to fill table data from mongodb
-                      const table = document.querySelector('.tableInfo');
-                    </script>
-                  </tr>
+                      <% products.forEach((product, index) => { %>
+                        <tr class="table-light">
+                          <td class="text-info"><%= index + 1 %></td>
+                          <td><%= product.productName %></td>
+                          <td><%= product.available %></td>
+                          <td><%= product.available %></td>
+                          <td><%= product.unrestricted %></td>
+                          <td><%= product.inTransit %></td>
+                          <td><%= product.unitPrice %></td>
+                          <td><%= product.totalPrice %></td>
+                        </tr>
+                  
   
                   <tr class="table-light">
                     <td class="text-info">69991432</td>
