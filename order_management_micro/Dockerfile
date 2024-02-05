@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Copy the environment variable file to the working directory
-COPY config.env .env
+# COPY config.env .env
 
 # Expose the port on which your Node.js application will run
 EXPOSE 3000
