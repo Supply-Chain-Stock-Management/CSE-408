@@ -19,10 +19,5 @@ COPY config.env .env
 # Expose the port on which your Node.js application will run
 EXPOSE 3000
 
-# Cleanup unnecessary files (Python and Markdown)
-RUN find . -type f -name '*.py' -delete && \
-    find . -type f -name '*.md' -delete && \
-    find . -type f -name '*.sh' -delete
-
 # Start the Node.js application
 CMD ["npm", "start"]

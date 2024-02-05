@@ -9,10 +9,10 @@ const productRoutes = require('./routes/productRoutes');
 // instantiate express
 const app = express();
 
-const PORT = 3000;
-const MONGODB_URI = 'mongodb+srv://supply-chain.m9qvkts.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority';
+const PORT = process.env.PORT;
+const MONGODB_URI = process.env.MONGODB_URI;
 
-const credentials = 'X509-cert-8379656237372897810.pem'
+const credentials = process.env.CREDENTIALS;
 const options = {
   tlsCertificateKeyFile: credentials,
   serverApi: {
