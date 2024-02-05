@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Check if kubectl is already installed
-if command -v kubectl &>/dev/null; then
-    echo "kubectl is already installed."
-    exit 0
-fi
+# if command -v kubectl &>/dev/null; then
+#     echo "kubectl is already installed."
+#     exit 0
+# fi
 
 # Define the desired kubectl version
-KUBECTL_VERSION="1.29.0"
+KUBECTL_VERSION="1.28.5"
 
 # Download the kubectl binary
 curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/${KUBECTL_VERSION}/2024-01-04/bin/linux/amd64/kubectl
