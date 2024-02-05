@@ -1,16 +1,10 @@
 inventory_management_micro/__pycache__
-inventory_management_micro/node_modules
 X509-cert-8379656237372897810.pem
 DB.md
-inventory_management_micro/package-lock.json
-inventory_management_micro/package.json
 inventory_management_micro/ubl-products.xlsx
 inventory_management_micro/X509-cert-8379656237372897810.pem
-order_management_micro/node_modules
 node_modules
 order_management_micro/db.md
-order_management_micro/package-lock.json
-order_management_micro/package.json
 order_management_micro/config.env
 order_management_micro/config.js
 eks_setup.md
@@ -21,3 +15,5 @@ kubectl
 eks-sample-deployment.yaml
 eks-sample-service.yaml
 docker
+order_management_micro/node_modules
+inventory_management_micro/node_modules

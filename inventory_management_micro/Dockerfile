@@ -15,6 +15,8 @@ COPY . .
 
 # Expose the port on which your Node.js application will run
 EXPOSE 3000
+# does not actually publish the specified ports. It serves as a documentation feature to indicate which ports are intended to be published
+
 
 # Start the Node.js application
 CMD ["npm", "start"]
