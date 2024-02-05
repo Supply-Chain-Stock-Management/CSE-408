@@ -28,12 +28,12 @@ jobs:
             service_name=$(basename "${service_folder}" "_micro")
 
             # Check if the local tag exists
-            if docker inspect "${{ secrets.DOCKER_USERNAME }}/supply_chain:${service_name}" &> /dev/null; then
+            if docker inspect "${{ secrets.DOCKERHUB_USERNAME }}/supply_chain:${service_name}" &> /dev/null; then
               echo "Local tag for ${service_name} exists. Deleting..."
-              docker rmi -f "${{ secrets.DOCKER_USERNAME }}/supply_chain:${service_name}"
+              docker rmi -f "${{ secrets.DOCKERHUB_USERNAME }}/supply_chain:${service_name}"
             fi
 
             # Build and push Docker image
-            docker build -t "${{ secrets.DOCKER_USERNAME }}/supply_chain:${service_name}" "${service_folder}"
-            docker push "${{ secrets.DOCKER_USERNAME }}/supply_chain:${service_name}"
+            docker build -t "${{ secrets.DOCKERHUB_USERNAME }}/supply_chain:${service_name}" "${service_folder}"
+            docker push "${{ secrets.DOCKERHUB_USERNAME }}/supply_chain:${service_name}"
           done
