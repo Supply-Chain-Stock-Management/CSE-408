@@ -14,3 +14,11 @@ order_management/package-lock.json
 order_management/package.json
 order_management/config.env
 order_management/config.js
+eks_setup.md
+awscliv2.zip
+kubectl.sha256
+aws
+kubectl
+eks-sample-deployment.yaml
+eks-sample-service.yaml
+docker
