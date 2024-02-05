@@ -1,0 +1,6 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongService
+metadata:
+  name: inventory-management-service
+config:
+  url: http://inventory_management_service.default.svc.cluster.local:8080
