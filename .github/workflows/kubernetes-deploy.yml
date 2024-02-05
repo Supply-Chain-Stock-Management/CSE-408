@@ -27,6 +27,9 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ap-south-1
 
+    - name: Check kubectl version
+      run: kubectl version
+
     - name: Deploy to Kubernetes
       run: |
         kubectl apply -f deploy/inventory_management-deployment.yaml
