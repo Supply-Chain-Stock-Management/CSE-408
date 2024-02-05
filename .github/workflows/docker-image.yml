@@ -1,4 +1,4 @@
-name: supply_chain_app
+name: supply_chain_images
 
 on:
   push:
