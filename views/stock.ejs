@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title><%= title %></title>
+    <meta property="og:title" content="Stock - exported project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {
+        line-height: 1.15;
+      }
+      body {
+        margin: 0;
+      }
+      * {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+      }
+      p,
+      li,
+      ul,
+      pre,
+      div,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      figure,
+      blockquote,
+      figcaption {
+        margin: 0;
+        padding: 0;
+      }
+      button {
+        background-color: transparent;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      [type="button"],
+      [type="reset"],
+      [type="submit"] {
+        -webkit-appearance: button;
+      }
+      button::-moz-focus-inner,
+      [type="button"]::-moz-focus-inner,
+      [type="reset"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      button:-moz-focus,
+      [type="button"]:-moz-focus,
+      [type="reset"]:-moz-focus,
+      [type="submit"]:-moz-focus {
+        outline: 1px dotted ButtonText;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      input {
+        padding: 2px 4px;
+      }
+      img {
+        display: block;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <script src="js/stock.js"></script>
+  </head>
+  
+  <body>
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css"
+rel="stylesheet"
+/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="css/stock.css" rel="stylesheet" />
+    <div>
+      <link href="css/shipment.css" rel="stylesheet" />
+      <link href="css/dashboard.css" rel="stylesheet" />
+
+
+
+
+        <!--POP UP Add product card-->
+
+    <div id="addCard" class="container" style="position: fixed;width: 40%; margin-left: 30%; margin-top: 12%;
+    height: 80%;
+    z-index:99; align-content: center; visibility: hidden;">
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Add Product</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Fill up the info</h6>
+          <form>
+            <div class="form-group" style="margin-bottom: 2%;">
+              <label for="pro-name">Choose a product:</label>
+
+            <select name="products" id="products">
+              <option value="lux">LUX</option>
+              <option value="wheel">WHEEL</option>
+              <option value="surf">SURF Excel</option>
+            </select>
+            </div>
+            <div class="form-group" style="margin-bottom: 2%;">
+              <label for="quantity">Quantity</label>
+              <input type="number" class="form-control" id="quantity">
+            </div>
+            
+            <button type="submit" class="btn btn-primary" onclick="resetNow()">Add</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!--Card ends here-->
+
+
+
+        <div id="mainPage" class="row">
+
+        <div class="col-sm sidebar">
+            <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                  <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                  <span class="fs-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 20 20">
+                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>JARIF ISLAM
+                  </span>
+                  
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <p class="text-center font-weight-light" style="font-weight: lighter;">Dashboards</p>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link link-dark sideLink" aria-current="page">
+                      <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                      Overview
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link link-dark">
+                      <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                      Sales
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link link-dark">
+                      <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                      Shipment
+                    </a>
+                  </li>
+                  <p class="text-center font-weight-light" style="font-weight: lighter;">Pages</p>
+                  <li>
+                    <a href="#" class="nav-link link-dark">
+                      <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                      Stock
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link link-dark">
+                      <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+                      Serve Request
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link link-dark">
+                      <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                      Shipment
+                    </a>
+                  </li>
+                </ul>
+                <hr>
+                
+              </div>
+        </div>
+
+        
+        <div class="col-6" style="margin-left: -1%; margin-top: 1%;">
+          <h4>Overall Inventory</h4>
+          <div class="container">
+
+            <div class="row">
+
+              
+
+              <div class="card bg-light" style="width: 25%; margin-left: 2%;">
+                <div class="card-body">
+                  <h5 class="text-primary">Storage Location</h5>
+                  <h6 class="card-subtitle mb-2">14</h6>
+                  <p class="card-title text-muted">Shreds</p>
+               </div>
+              </div>
+
+
+              <div class="card bg-light" style="width: 35%; margin-left: 2%;">
+                <div class="card-body">
+                  <div class="row">
+                    <h5 class="text-primary">Total Products</h5>
+                  <div class="col"><h6 class="card-subtitle mb-2 text-dark" style="margin-top: 20%;">95258</h6>
+                    <p class="card-title text-muted">CS/BS</p>
+                  </div>
+                  <div class="col"><h6 class="card-subtitle mb-2 text-dark" style="margin-top: 20%;">887,96,255</h6>
+                    <p class="card-title text-muted">Total Value</p>
+                  </div>
+                  </div>
+                  
+               </div>
+              </div>
+
+
+              <div class="card bg-light" style="width: 33%; margin-left: 2%;">
+                <div class="card-body">
+                  <div class="row">
+                    <h5 class="text-primary text-danger">Expiring Soon</h5>
+                  <div class="col"><h6 class="card-subtitle mb-2 text-dark" style="margin-top: 20%;">12</h6>
+                    <p class="card-title text-muted">Materials</p>
+                  </div>
+                  <div class="col"><h6 class="card-subtitle mb-2 text-dark" style="margin-top: 20%;">335</h6>
+                    <p class="card-title text-muted">CS/BS</p>
+                  </div>
+                  </div>
+                  
+               </div>
+              </div>
+
+
+
+
+            </div>
+
+            <div class="row justify-content-md-center" style="margin-top: 17%; width: 80vw;">
+
+              <div>
+
+                <table class="table tableInfo text-justify text-center table-bordered" style="margin-left: -5%;">
+                  <tr>
+                    <div style="margin-left: -3%;"><span style="font-weight: bold; font-size: large;">Products</span>
+                      <button type="button" class="btn  btn-outline-secondary" style="margin-left: 2%; margin-top: 2%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-filter" viewBox="0 0 20 20">
+                          <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                        Filter</button>
+                        <button type="button" class="btn btn-primary" style=" margin-top: 2%; margin-left: 1%;">
+                          
+                          Download</button>
+            
+                            <button type="button" class="btn btn-primary" style=" margin-top: 2%; margin-left: 1%;" onclick="addProShow()">
+                              Add
+                            </button>
+                            
+                    </div>
+                    
+                  </tr>
+                <thead>
+                  <tr>
+                    <th scope="col text-center">Material</th>
+                    <th scope="col text-center">Product</th>
+                    <th scope="col text-center">Base Unit</th>
+                    <th scope="col text-center">Available</th>
+                    <th scope="col text-center">Unrestricted</th>
+                    <th scope="col text-center">In Transit</th>
+                    <th scope="col text-center">In QC</th>
+                    <th scope="col text-center">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+  
+                  <tr class="table-light">
+                    <td class="text-info">20091436</td>
+                    <td>PUREIT-MOS POLARSHIP CAP</td>
+                    <td>CS</td>
+                    <td>1748</td>
+                    <td>1327</td>
+                    <td>237</td>
+                    <td>5</td>
+                    <td>255,1517</td>
+                  </tr>
+  
+                  <tr class="table-light">
+                    <td class="text-info">69991432</td>
+                    <td>DOV-CONDITIONER ISHP CHILD</td>
+                    <td>CS</td>
+                    <td>3527</td>
+                    <td>2875</td>
+                    <td>530</td>
+                    <td>0</td>
+                    <td>371.2</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+
+              </div>
+
+
+
+            </div>
+
+            
+
+          </div>
+          
+        </div>
+
+
+
+        <div class="col" style="position: relative; width:100%; margin-left: 3%;">
+          
+
+          <div class="container align-items-stretch">
+            <a href="/" class="d-flex flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+              <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="35" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 20 20">
+                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+              </svg>
+              <span class="fs-5 fw-semibold">Notifications</span>
+            </a>
+            <div class="list-group list-group-flush border-bottom scrollarea" style=" height:35vh; overflow-y: scroll;">
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">Shipment to Dhaka departed</strong>
+                  <small>Just Now</small>
+                </div>
+                <div class="col-10 mb-1 small">Request from M/S copp was accepted and it is enroute</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Tues</small>
+                </div>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Mon</small>
+                </div>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+        
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Wed</small>
+                </div>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Tues</small>
+                </div>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Mon</small>
+                </div>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Wed</small>
+                </div>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Tues</small>
+                </div>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Mon</small>
+                </div>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Wed</small>
+                </div>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Tues</small>
+                </div>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Mon</small>
+                </div>
+                <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+              </a>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+    
+    <script src="js/stock.js"></script>
+  </body>
+</html>
