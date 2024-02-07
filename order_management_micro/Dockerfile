@@ -17,7 +17,7 @@ COPY . .
 # COPY config.env .env
 
 # Expose the port on which your Node.js application will run
-EXPOSE 3000
+EXPOSE 3030
 
 # Start the Node.js application
 CMD ["npm", "start"]

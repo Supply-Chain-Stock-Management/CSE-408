@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expose the port on which your Node.js application will run
-EXPOSE 3000
+EXPOSE 8080
 # does not actually publish the specified ports. It serves as a documentation feature to indicate which ports are intended to be published
 
 

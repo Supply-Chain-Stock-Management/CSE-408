@@ -17,3 +17,5 @@ eks-sample-service.yaml
 docker
 order_management_micro/node_modules
 inventory_management_micro/node_modules
+inventory_management_micro/deploy/.env
+order_management_micro/deploy/.env

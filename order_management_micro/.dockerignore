@@ -9,3 +9,5 @@
 
 # Exclude Node modules
 node_modules
+
+deploy
