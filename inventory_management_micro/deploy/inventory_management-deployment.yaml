@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inventory-management
+  namespace: logistics
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: inventory-management
+  template:
+    metadata:
+      labels:
+        app: inventory-management
+    spec:
+      # containers:
+      #   - name: inventory-management
+      #     image: ${{ secrets.DOCKERHUB_USERNAME }}/supply_chain:inventory_management
+      #     ports:
+      #       - containerPort: 8080
+      #     env:
+      #       - name: PORT
+      #         value: "8080"
+      #       - name: MONGODB_URI
+      #         value: "${{ secrets.MONGODB_URI }}"
+      #       - name: CREDENTIALS
+      #         value: "${{ secrets.INVENTORY_CREDENTIALS }}"
+      containers:
+        - name: inventory-management
+          image: "itistopu/supply_chain:inventory_management"
+          ports:
+            - containerPort: 8080
+          # env:
+          #   - name: PORT
+          #     value: ${PORT}
+          #   - name: MONGODB_URI
+          #     value: ${MONGODB_URI}
+          #   - name: CREDENTIALS
+          #     value: ${CREDENTIALS}
+          envFrom:
+            - configMapRef:
+                name: inventory-management-config
+          volumeMounts:
+            - name: tls-certs
+              mountPath: /etc/tls
+              readOnly: true
+      volumes:
+        - name: tls-certs
+          secret:
+            secretName: tls-cert-secret
