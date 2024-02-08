@@ -11,3 +11,18 @@ function resetNow(){
     var mainPage = document.getElementById('mainPage');
     mainPage.style.cssText += 'opacity: 1';
 }
+
+async function dltStock(invId){
+    console.log("Dhukse re");
+    let response = await fetch(`/inventories/${invId}`, {
+      method: "DELETE",
+    });
+    let result = await response.json();
+
+    if(result.errors){
+      console.log("Error deleting");
+    }
+    else{
+      document.getElementById(invId).remove();
+    }
+  }

@@ -2,11 +2,14 @@
 const express = require("express");
 const dotenv = require("dotenv");
 
-const {getStock} = require("../controller/stockController");
+const {getStock, dltOne} = require("../controller/stockController");
 
 const router = express.Router();
 
-//login page
-router.get("/stock", getStock);
+//show stock
+router.get("/", getStock);
+
+//dlt stock
+router.delete("/:id", dltOne);
 
 module.exports = router;
