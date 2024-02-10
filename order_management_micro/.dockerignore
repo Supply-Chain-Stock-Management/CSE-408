@@ -1,0 +1,13 @@
+# Exclude Python files
+*.py
+
+# Exclude Shell scripts
+*.sh
+
+# Exclude Markdown files
+*.md
+
+# Exclude Node modules
+node_modules
+
+deploy

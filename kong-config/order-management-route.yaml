@@ -1,0 +1,13 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongRoute
+metadata:
+  name: order-management-route
+spec:
+  methods:
+    - GET
+    - POST
+    - PUT
+    - DELETE
+  paths:
+    - /order-management
+  service: order-management-service

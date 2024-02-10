@@ -14,15 +14,10 @@ RUN npm install
 COPY . .
 
 # Copy the environment variable file to the working directory
-COPY config.env .env
+# COPY config.env .env
 
 # Expose the port on which your Node.js application will run
-EXPOSE 3000
-
-# Cleanup unnecessary files (Python and Markdown)
-RUN find . -type f -name '*.py' -delete && \
-    find . -type f -name '*.md' -delete && \
-    find . -type f -name '*.sh' -delete
+EXPOSE 3030
 
 # Start the Node.js application
 CMD ["npm", "start"]

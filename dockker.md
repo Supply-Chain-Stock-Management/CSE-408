@@ -35,3 +35,11 @@ COPY config.env .env
 # Kong
 - ```--network=host``` in ```run_kong.sh```allows **Kong** to use the host's network. Need to be adjusted based on the deployment.
 - replace ```localhost``` with the **actual IP address or hostname** where Kong can reach your Express.js app.
+# docker hub push and pull
+## push
+### manual
+- tag
+- push
+### automated
+- access toke in docker hub
+- workflows will execute this access token and username as secret environment variables on GitHub

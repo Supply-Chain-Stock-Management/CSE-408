@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: order-management-service
+  namespace: logistics
+  labels:
+    app: order-management
+spec:
+  selector:
+    app: order-management
+  ports:
+    - protocol: TCP
+      port: 3030 # incoming traffic
+      targetPort: 3030 # forw`arded to port 3030

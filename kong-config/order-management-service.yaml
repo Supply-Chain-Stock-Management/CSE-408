@@ -1,0 +1,6 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongService
+metadata:
+  name: order-management-service
+config:
+  url: http://order_management-service.default.svc.cluster.local:8080

@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: inventory-management-ingress
+  annotations:
+    konghq.com/strip-path: 'true'
+    # The annotation konghq.com/strip-path: 'true' indicates that Kong should strip the path /inventory before forwarding the request to the backend service, so the service will receive the request without the path prefix.
+spec:
+  ingressClassName: kong
+  rules:
+  - http:
+      paths:
+      - path: /inventory
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: inventory-management-service
+            port:
+              number: 8080

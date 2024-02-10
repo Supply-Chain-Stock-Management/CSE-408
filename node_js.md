@@ -9,6 +9,18 @@ npm install express --save
 <br><br>
 Then ```express``` will be on ```node_modules``` directory
 ### npm install
-reads the dependencies and devDependencies sections of the ```package.json``` file and installs the specified packages, along with their dependencies, into a ```node_modules``` directory in the project.
 <br>
 Can make sure by running ```npm install``` after adding dependecy then check ```node_modules```
+
+# modifying package.json
+## dotenv in dependency
+as i take env variables as arguments<br>
+so  ~~"dotenv": "^16.4.1",~~
+```sh
+"dependencies": {
+    "express": "^4.18.2",
+    "pg": "^8.11.3"
+  }
+```
+## when docker (not locally)
+"start": "node index.js ~~PORT=$PORT MONGODB_URI=$MONGODB_URI CREDENTIALS=$CREDENTIALS~~",
