@@ -482,6 +482,8 @@
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
     <script src="js/stock.js"></script>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   
   <body>
@@ -675,7 +677,8 @@ rel="stylesheet"
             <div class="row justify-content-md-center" style="margin-top: 17%; width: 80vw;">
 
               <div>
-
+                
+                
                 <table class="table tableInfo text-justify text-center table-bordered" style="margin-left: -5%;">
                   <tr>
                     <div style="margin-left: -3%;"><span style="font-weight: bold; font-size: large;">Products</span>
@@ -696,6 +699,7 @@ rel="stylesheet"
                     </div>
                     
                   </tr>
+                  <input id="sBox" class="form-control me-2" type="text" placeholder="Search product" aria-label="Search" style="width: 50%; margin-top: 1%;">
                 <thead>
                   <tr>
                     <th scope="col text-center">Product ID</th>
@@ -709,7 +713,7 @@ rel="stylesheet"
                     <!--<th scope="col text-center">Delete</th>-->
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="ourTable">
                   <% inventories.forEach(function(inv) { %>
                   <tr id="<%= inv._id %>" class="table-light">
                     <td id="prodIdRow"><a href="productPage/<%= inv.productID %>"><%= inv.productID %></a></td>
@@ -853,14 +857,26 @@ rel="stylesheet"
     </div>
     </div>
 
-    <script>
+    <!--    <script>
       function linkWithParam(){	
         console.log("Dhukse");
         var proId  = getElementById("prodIdRow").textContent();
         console.log(proId);
         window.location.href = "/productPage/" + proId;
       }
-    </script>
+    </script> -->
+
+    <script>
+      $(document).ready(function () {
+          $("#sBox").on("keyup", function () {
+              var value = $(this).val().toLowerCase();
+              $("#ourTable tr").filter(function () {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+              });
+          });
+      });
+  </script>
+
     <script src="js/stock.js"></script>
   </body>
 </html>
