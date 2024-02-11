@@ -26,3 +26,4 @@ async function dltStock(invId){
       document.getElementById(invId).remove();
     }
   }
+  

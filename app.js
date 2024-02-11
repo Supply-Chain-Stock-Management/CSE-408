@@ -6,6 +6,7 @@ const cookieParser = require("cookie-parser");
 const loginRouter = require("./router/loginRouter");
 const stockRouter = require("./router/stockRouter");
 const poRouter = require("./router/poRouter");
+const proPageRouter = require("./router/proPageRouter");
 
 
 //internal import
@@ -35,9 +36,13 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 
 //routing setup
 app.use('/', loginRouter);
-//login kore apatoto stock e jabe
+//stock router
 app.use('/stock', stockRouter);
+//purchase order
 app.use('/purchaseOrder', poRouter);
+//product page
+app.use('/productPage', proPageRouter);
+
 
 //error handling
 

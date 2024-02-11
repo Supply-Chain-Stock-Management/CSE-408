@@ -521,43 +521,6 @@ rel="stylesheet"
 
 
 
-
-        <!--POP UP Add product card-->
-
-    <div id="addCard" class="container" style="position: fixed;width: 40%; margin-left: 30%; margin-top: 12%;
-    height: 80%;
-    z-index:99; align-content: center; visibility: hidden;">
-
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Add Product</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Fill up the info</h6>
-          <form>
-            <div class="form-group" style="margin-bottom: 2%;">
-              <label for="pro-name">Choose a product:</label>
-
-            <select name="products" id="products">
-              <option value="lux">LUX</option>
-              <option value="wheel">WHEEL</option>
-              <option value="surf">SURF Excel</option>
-            </select>
-            </div>
-            <div class="form-group" style="margin-bottom: 2%;">
-              <label for="quantity">Quantity</label>
-              <input type="number" class="form-control" id="quantity">
-            </div>
-            
-            <button type="submit" class="btn btn-primary" onclick="resetNow()">Add</button>
-          </form>
-        </div>
-      </div>
-
-    </div>
-
-    <!--Card ends here-->
-
-
-
         <div id="mainPage" class="row">
 
         <div class="col-sm sidebar">
@@ -620,113 +583,66 @@ rel="stylesheet"
 
         
         <div class="col-6" style="margin-left: -1%; margin-top: 1%;">
-          <h4>Overall Inventory</h4>
           <div class="container">
+
+            <div class="row">
+              <h3>Product ID (fetch from backend)</h3>
+                <div class="card" style="width: 30%; margin-top: 2%; margin-left: 20%">
+                  <div class="card-body">
+                    <h5 class="card-title">Available in Stock</h5>
+                    <p class="card-text">Fetch from backend</p>
+                  </div>
+                </div>
+
+                <div class="card" style="width: 30%; margin-top: 2%; margin-left: 10%;">
+                  <div class="card-body">
+                    <h5 class="card-title">Total Value</h5>
+                    <p class="card-text">Fetch from backend</p>
+                  </div>
+                </div>
+
+            </div>
+
 
             <div class="row">
 
               
 
-              <div class="card bg-light" style="width: 25%; margin-left: 2%;">
-                <div class="card-body">
-                  <h5 class="text-primary">Storage Location</h5>
-                  <h6 class="card-subtitle mb-2">14</h6>
-                  <p class="card-title text-muted">Shreds</p>
-               </div>
-              </div>
-
-
-              <div class="card bg-light" style="width: 35%; margin-left: 2%;">
-                <div class="card-body">
-                  <div class="row">
-                    <h5 class="text-primary">Total Products</h5>
-                  <div class="col"><h6 class="card-subtitle mb-2 text-dark" style="margin-top: 20%;">95258</h6>
-                    <p class="card-title text-muted">CS/BS</p>
-                  </div>
-                  <div class="col"><h6 class="card-subtitle mb-2 text-dark" style="margin-top: 20%;">887,96,255</h6>
-                    <p class="card-title text-muted">Total Value</p>
-                  </div>
-                  </div>
-                  
-               </div>
-              </div>
-
-
-              <div class="card bg-light" style="width: 33%; margin-left: 2%;">
-                <div class="card-body">
-                  <div class="row">
-                    <h5 class="text-primary text-danger">Expiring Soon</h5>
-                  <div class="col"><h6 class="card-subtitle mb-2 text-dark" style="margin-top: 20%;">12</h6>
-                    <p class="card-title text-muted">Materials</p>
-                  </div>
-                  <div class="col"><h6 class="card-subtitle mb-2 text-dark" style="margin-top: 20%;">335</h6>
-                    <p class="card-title text-muted">CS/BS</p>
-                  </div>
-                  </div>
-                  
-               </div>
-              </div>
-
-
+              <button type="button" class="btn btn-primary" style="width: 40%; margin-top: 2%; margin-left: 10%">Add to PO</button>
+              <button type="button" class="btn btn-secondary" style="width: 40%; margin-top: 2%; margin-left: 10%"><a href="stock" class="text-dark link-underline link-underline-opacity-0">Back</a></button>
 
 
             </div>
+
 
             <div class="row justify-content-md-center" style="margin-top: 17%; width: 80vw;">
 
               <div>
 
-                <table class="table tableInfo text-justify text-center table-bordered" style="margin-left: -5%;">
-                  <tr>
-                    <div style="margin-left: -3%;"><span style="font-weight: bold; font-size: large;">Products</span>
-                      <button type="button" class="btn  btn-outline-secondary" style="margin-left: 2%; margin-top: 2%;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-filter" viewBox="0 0 20 20">
-                          <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
-                        </svg>
-                        <!--
-                        Filter</button>
-                        <button type="button" class="btn btn-primary" style=" margin-top: 2%; margin-left: 1%;">
-                          
-                          Download</button>
-            
-                            <button type="button" class="btn btn-primary" style=" margin-top: 2%; margin-left: 1%;" onclick="addProShow()">
-                              Add
-                            </button>
-                            -->
-                    </div>
-                    
-                  </tr>
-                <thead>
-                  <tr>
-                    <th scope="col text-center">Product ID</th>
-                    <th scope="col text-center">Product Name</th>
-                    <th scope="col text-center">Quantity</th>
-                    <th scope="col text-center">In QC</th>
-                    <th scope="col text-center">Intransit</th>
-                    <th scope="col text-center">Unrestricted</th>
-                    
-                    
-                    <!--<th scope="col text-center">Delete</th>-->
-                  </tr>
-                </thead>
-                <tbody>
-                  <% inventories.forEach(function(inv) { %>
-                  <tr id="<%= inv._id %>" class="table-light">
-                    <td id="prodIdRow"><a href="productPage/<%= inv.productID %>"><%= inv.productID %></a></td>
-                    <td><%= inv.productName %></td>
-                    <td><%= inv.quantity %></td>
-                    <td><%= inv.inQC  %></td>
-                    <td><%= inv.inTransit %></td>
-                    <td><%= inv.quantity - inv.inQC - inv.inTransit %></td>
-                    <!--<td onclick="dltStock('<%= inv._id %>')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                      <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
-                      <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
-                    </svg></td>-->
-                  </tr>
-                  <% }); %>
-                  
-                </tbody>
-              </table>
+                <div class="row">
+                  <h4 class="text-success">Brand</h4>
+                  <textarea><%= aProduct.BrandName %></textarea>
+                </div>
+                <div class="row">
+                  <h4 class="text-success">Product Name</h4>
+                  <textarea><%= aProduct.ProductName %></textarea>
+                </div>
+                <div class="row">
+                  <h4 class="text-success">Product Size</h4>
+                  <textarea><%= aProduct.ProductSize %></textarea>
+                </div>
+                <div class="row">
+                  <h4 class="text-success">Category</h4>
+                  <textarea><%= aProduct.Category %></textarea>
+                </div>
+                <div class="row">
+                  <h4 class="text-success">MRP</h4>
+                  <textarea><%= aProduct.MRP %></textarea>
+                </div>
+                <div class="row">
+                  <h4 class="text-success">Description</h4>
+                  <textarea><%= aProduct.Description %></textarea>
+                </div>
 
               </div>
 
@@ -853,14 +769,7 @@ rel="stylesheet"
     </div>
     </div>
 
-    <script>
-      function linkWithParam(){	
-        console.log("Dhukse");
-        var proId  = getElementById("prodIdRow").textContent();
-        console.log(proId);
-        window.location.href = "/productPage/" + proId;
-      }
-    </script>
+    
     <script src="js/stock.js"></script>
   </body>
 </html>
