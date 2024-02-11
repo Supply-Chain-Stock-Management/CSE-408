@@ -14,15 +14,15 @@ const productSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        Category: {
+        "Category": {
             type: String,
             required: true,
         },
-        MRP: {
+        "MRP": {
             type: Number,
             required: true,
         },
-        Description: {
+        "Description": {
             type: String,
             required: true,
         },
