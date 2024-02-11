@@ -6,10 +6,12 @@ const cookieParser = require("cookie-parser");
 const loginRouter = require("./router/loginRouter");
 const stockRouter = require("./router/stockRouter");
 const poRouter = require("./router/poRouter");
+const cartRouter = require("./router/cartRouter");
 
 
 //internal import
 const {notFoundHandler, errorHandler} = require("./middleware/errorHandler");
+const cart = require("./models/cart");
 
 const app = express();
 dotenv.config();
@@ -38,6 +40,7 @@ app.use('/', loginRouter);
 //login kore apatoto stock e jabe
 app.use('/stock', stockRouter);
 app.use('/purchaseOrder', poRouter);
+app.use('/cart', cartRouter);
 
 //error handling
 
