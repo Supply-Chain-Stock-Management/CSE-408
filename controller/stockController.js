@@ -2,7 +2,7 @@ const inventory = require("../models/inventoryFac");
 
 async function getStock(req, res, next){
     try{
-        console.log("stockController")
+        //console.log("stockController")
         const inventories = await inventory.find();
 
         //page render

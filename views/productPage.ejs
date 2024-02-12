@@ -521,6 +521,32 @@ rel="stylesheet"
 
 
 
+         <!--POP UP Add product card-->
+
+    <div id="addCard" class="container" style="position: fixed;width: 40%; margin-left: 30%; margin-top: 12%;
+    height: 80%;
+    z-index:99; align-content: center; visibility: hidden;">
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Add Product</h5>
+          <form method="POST" action="">
+            <div class="form-group" style="margin-bottom: 2%;">
+              <label for="quantity">Quantity</label>
+              <input type="number" name="quantity" class="form-control" id="quantity">
+            </div>
+            
+            <button type="submit" class="btn btn-primary" onclick="resetNow()"><input type="submit" value="Add"
+              /></button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!--Card ends here-->
+
+
         <div id="mainPage" class="row">
 
         <div class="col-sm sidebar">
@@ -539,38 +565,38 @@ rel="stylesheet"
                 <ul class="nav nav-pills flex-column mb-auto">
                     <p class="text-center font-weight-light" style="font-weight: lighter;">Dashboards</p>
                   <li class="nav-item">
-                    <a href="#" class="nav-link link-dark sideLink" aria-current="page">
+                    <a href="/" class="nav-link link-dark sideLink" aria-current="page">
                       <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
                       Overview
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="nav-link link-dark">
+                    <a href="/" class="nav-link link-dark">
                       <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
                       Sales
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="nav-link link-dark">
+                    <a href="" class="nav-link link-dark">
                       <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
                       Shipment
                     </a>
                   </li>
                   <p class="text-center font-weight-light" style="font-weight: lighter;">Pages</p>
                   <li>
-                    <a href="#" class="nav-link link-dark">
+                    <a href="/stock" class="nav-link link-dark">
                       <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
                       Stock
                     </a>
                   </li>
                   <li>
-                    <a href="purchaseOrder" class="nav-link link-dark">
+                    <a href="/purchaseOrder" class="nav-link link-dark">
                       <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
                       Purchase Order
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="nav-link link-dark">
+                    <a href="" class="nav-link link-dark">
                       <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
                       Shipment
                     </a>
@@ -586,18 +612,18 @@ rel="stylesheet"
           <div class="container">
 
             <div class="row">
-              <h3>Product ID (fetch from backend)</h3>
+              <h3><%= aProduct.ProductName %></h3>
                 <div class="card" style="width: 30%; margin-top: 2%; margin-left: 20%">
                   <div class="card-body">
-                    <h5 class="card-title">Available in Stock</h5>
-                    <p class="card-text">Fetch from backend</p>
+                    <h5 class="card-title">Product ID</h5>
+                    <p class="card-text"><%= productFromInv.productID %></p>
                   </div>
                 </div>
 
                 <div class="card" style="width: 30%; margin-top: 2%; margin-left: 10%;">
                   <div class="card-body">
-                    <h5 class="card-title">Total Value</h5>
-                    <p class="card-text">Fetch from backend</p>
+                    <h5 class="card-title">Available in Stock</h5>
+                    <p class="card-text"><%= productFromInv.quantity %></p>
                   </div>
                 </div>
 
@@ -608,9 +634,8 @@ rel="stylesheet"
 
               
 
-              <button type="button" class="btn btn-primary" style="width: 40%; margin-top: 2%; margin-left: 10%">Add to PO</button>
-              <button type="button" class="btn btn-secondary" style="width: 40%; margin-top: 2%; margin-left: 10%"><a href="stock" class="text-dark link-underline link-underline-opacity-0">Back</a></button>
-
+              <button type="button" class="btn btn-primary" onclick="addProShow()" style="width: 40%; margin-top: 2%; margin-left: 10%">Add to PO</button>
+              <button type="button" class="btn btn-secondary" style="width: 40%; margin-top: 2%; margin-left: 10%"><a href="/purchaseOrder" class="text-dark link-underline link-underline-opacity-0" style="width: 100%;">Back</a></button>
 
             </div>
 
@@ -639,7 +664,7 @@ rel="stylesheet"
                   <h4 class="text-success">MRP</h4>
                   <textarea><%= aProduct.MRP %></textarea>
                 </div>
-                <div class="row">
+                <div class="row" style="width: 90%;">
                   <h4 class="text-success">Description</h4>
                   <textarea><%= aProduct.Description %></textarea>
                 </div>
@@ -770,6 +795,6 @@ rel="stylesheet"
     </div>
 
     
-    <script src="js/stock.js"></script>
+    <script src="../js/stock.js"></script>
   </body>
 </html>
