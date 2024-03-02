@@ -15,7 +15,7 @@
         <p><strong>Vehicle Capacity:</strong> {{ vehicle.capacity }}</p>
         <h2>Select Shipments:</h2>
         {% for shipment in shipments %}
-            <input type="checkbox" name="shipments" value="{{ shipment.id }}"> {{ shipment.source}} to {{ shipment.destination}} (Capacity: {{ shipment.weight }})<br>
+            <input type="checkbox" name="shipments" value="{{ shipment.id }}"> {{ shipment.source}} to {{ shipment.destination}} (weight: {{ shipment.weight }})<br>
         {% endfor %}
         <br>
         <button type="submit">Assign Shipments</button>

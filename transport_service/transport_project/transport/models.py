@@ -13,6 +13,11 @@ class Vehicle(models.Model):
     name = models.CharField(max_length=100)
     capacity = models.DecimalField(max_digits=10, decimal_places=2)
     status = models.CharField(max_length=50)
+    vehicle_type = models.CharField(max_length=100, null=True, blank=True)
+    registration_number = models.CharField(max_length=100, null=True, blank=True)
+    # mobile number of the driver
+    driver_mobile = models.CharField(max_length=15, null=True, blank=True)
+    status = models.CharField(max_length=50, default='available')
 
 
 # GVW	6250 kg

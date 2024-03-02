@@ -13,6 +13,10 @@
                 <th>Name</th>
                 <th>Capacity</th>
                 <th>Status</th>
+                <th>Vehicle Type</th>
+                <th>Registration Number</th>
+                <th>Driver Mobile</th>
+                <th>Status</th>
                 <th>Actions</th> <!-- New column for actions -->
             </tr>
         </thead>
@@ -21,6 +25,10 @@
             <tr>
                 <td>{{ vehicle.name }}</td>
                 <td>{{ vehicle.capacity }}</td>
+                <td>{{ vehicle.status }}</td>
+                <td>{{ vehicle.vehicle_type }}</td>
+                <td>{{ vehicle.registration_number }}</td>
+                <td>{{ vehicle.driver_mobile }}</td>
                 <td>{{ vehicle.status }}</td>
                 <td>
                     <!-- Button to check details -->
@@ -31,7 +39,7 @@
             </tr>
             {% empty %}
             <tr>
-                <td colspan="4">No vehicles available</td>
+                <td colspan="7">No vehicles available</td>
             </tr>
             {% endfor %}
         </tbody>

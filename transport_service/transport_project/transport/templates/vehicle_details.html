@@ -10,7 +10,47 @@
     <p><strong>Name:</strong> {{ vehicle.name }}</p>
     <p><strong>Capacity:</strong> {{ vehicle.capacity }}</p>
     <p><strong>Status:</strong> {{ vehicle.status }}</p>
-    <!-- Add more details as needed -->
+    <h2>Current Shipments:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Weight</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if shipments %}
+                {% for shipment in shipments %}
+                    <tr>
+                        <td>{{ shipment.source }}</td>
+                        <td>{{ shipment.destination }}</td>
+                        <td>{{ shipment.weight }}</td>
+                        <td>{{ shipment.status }}</td>
+                        <td>
+                            <form action="{% url 'remove_shipment' vehicle_id=vehicle.id %}" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="shipment_id" value="{{ shipment.id }}">
+                                <button type="submit" {% if shipment.status == 'en route' %} disabled {% endif %}>Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="5">No shipments available</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+    {% if vehicle.status == 'available' %}
     <a href="{% url 'assign_shipment' vehicle_id=vehicle.id %}"><button>Assign Shipment</button></a>
+    <form action="{% url 'confirm_shipments' vehicle_id=vehicle.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm</button>
+    </form>
+    {% endif %}
 </body>
 </html>
