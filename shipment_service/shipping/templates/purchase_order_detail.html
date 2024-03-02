@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Order Details</title>
+</head>
+<body>
+    <h1>Purchase Order Details</h1>
+    <h2>ID: {{ purchase_order.id }}</h2>
+    <h2>Purchase Order #: {{ purchase_order.poID }}</h2>
+    <p>Source: {{ purchase_order.source }}</p>
+    <p>Created On: {{ purchase_order.createdOn }}</p>
+    <h3>Products:</h3>
+    <ul>
+        {% for product in purchase_order.products %}
+            <li>
+                <h4>Product ID: {{ product.productID }}</h4>
+                <p>Quantity: {{ product.quantity }}</p>
+                <p>MRP: {{ product.MRP }}</p>
+                <!-- <p>Name: {{ product.ProductName }}</p>
+                <p>Brand: {{ product.BrandName }}</p>
+                <p>Size: {{ product.ProductSize }}</p>
+                <p>Category: {{ product.Category }}</p>
+                <p>Description: {{ product.Description }}</p> -->
+            </li>
+        {% endfor %}
+    </ul>
+    {% if not purchase_order.shipment %}
+        <form action="{% url 'add_purchase_order' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="purchase_order_id" value="{{ purchase_order.id }}">
+            <label for="shipment">Select a Shipment:</label>
+            <select name="shipment" id="shipment">
+                <option value="">create a New Shipment</option>
+                {% for shipment in shipments %}
+                <option value="{{ shipment.id }}">{{ shipment.id }}__{{ shipment.destination }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Add to Shipment</button>
+        </form>
+    {% else %}
+        <p>This purchase order is already added to the following shipment:</p>
+        <p>Shipment ID: {{ purchase_order.shipment.id }}</p>
+        <p>Destination: {{ purchase_order.shipment.destination }}</p>
+        <p>Confirmed On: {{ purchase_order.shipment.confirmedOn }}</p>
+        <a href="{% url 'shipment_status' purchase_order.shipment.id %}">View Shipment Status</a>
+    {% endif %}
+</body>
+</html>

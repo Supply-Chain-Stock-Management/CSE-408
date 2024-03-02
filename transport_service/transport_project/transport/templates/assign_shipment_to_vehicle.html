@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Shipment to Vehicle</title>
+</head>
+<body>
+    <h1>Assign Shipment to Vehicle: {{ vehicle.name }}</h1>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <p><strong>Vehicle Capacity:</strong> {{ vehicle.capacity }}</p>
+        <h2>Select Shipments:</h2>
+        {% for shipment in shipments %}
+            <input type="checkbox" name="shipments" value="{{ shipment.id }}"> {{ shipment.source}} to {{ shipment.destination}} (Capacity: {{ shipment.weight }})<br>
+        {% endfor %}
+        <br>
+        <button type="submit">Assign Shipments</button>
+    </form>
+</body>
+</html>

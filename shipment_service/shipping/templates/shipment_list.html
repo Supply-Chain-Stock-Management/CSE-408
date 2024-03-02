@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipment List</title>
+</head>
+<body>
+    <h1>Shipment List</h1>
+    <ul>
+        {% for shipment in shipments %}
+        <li>
+            <p>Shipment ID: {{ shipment.id }}</p>
+            <p>Destination: {{ shipment.destination }}</p>
+            <p>Confirmed On: {{ shipment.confirmedOn }}</p>
+            <!-- Add more shipment details as needed -->
+            <a href="{% url 'shipment_status' shipment.id %}">View Shipment Status</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_shipment' %}"><button>Create Shipment</button></a>
+
+</body>
+</html>

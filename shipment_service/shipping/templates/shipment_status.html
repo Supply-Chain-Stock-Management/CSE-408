@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipment Status</title>
+</head>
+<body>
+    <h1>Shipment Status</h1>
+    <p>Shipment ID: {{ shipment.id }}</p>
+    <p>Destination: {{ shipment.destination }}</p>
+    <p>Confirmed On: {{ shipment.confirmedOn }}</p>
+    <!-- Add more details about the shipment as needed -->
+    <a href="{% url 'shipment_edit' shipment.id %}"><button>Edit Shipment</button></a>
+    <h2>Purchase Orders</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Purchase Order ID</th>
+                <th>Source</th>
+                <th>Created On</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for purchase_order in purchase_orders %}
+                <tr>
+                    <td>{{ purchase_order.id }}</td>
+                    <td>{{ purchase_order.source }}</td>
+                    <td>{{ purchase_order.createdOn }}</td>
+                    <td>{{ purchase_order.status }}</td>
+                    <td>
+                        <a href="{% url 'purchase_order_detail' purchase_order.id %}"><button>Details</button></a>
+                        <form action="{% url 'remove_purchase_order' shipment_id=shipment.id %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="purchase_order_id" value="{{ purchase_order.id }}">
+                            <button type="submit">Remove</button>
+                        </form>
+                    </td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'shipment_confirm' shipment.id %}"><button>Confirm</button></a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Shipment</title>
+</head>
+<body>
+    <h1>Create Shipment</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" required>
+        
+        <!-- Display checkboxes for selecting purchase orders -->
+        <fieldset>
+            <legend>Select Purchase Orders:</legend>
+            {% for purchase_order in purchase_orders %}
+            <input type="checkbox" id="purchase_order_{{ purchase_order.id }}" name="purchase_order_ids" value="{{ purchase_order.id }}">
+            <label for="purchase_order_{{ purchase_order.id }}">Purchase Order #{{ purchase_order.id }}</label><br>
+            {% endfor %}
+        </fieldset>
+        
+        <button type="submit">Create Shipment</button>
+    </form>
+</body>
+</html>

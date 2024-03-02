@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purchase Order List</title>
+</head>
+<body>
+    <h1>Purchase Order List</h1>
+    <ul>
+        {% for purchase_order in purchase_orders %}
+            <li>Purchase Order ID: {{ purchase_order.poID }}</li>
+            <li>Source: {{ purchase_order.source }}</li>
+            <li>Created On: {{ purchase_order.createdOn }}</li>
+            <li><a href="{% url 'purchase_order_detail' purchase_order.pk %}">Details</a></li>
+            <hr>
+        {% endfor %}
+    </ul>
+</body>
+</html>
