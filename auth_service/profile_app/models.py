@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from authentication_app.models import Entity
 
 # Create your models here.
 
@@ -11,6 +12,7 @@ class Profile(models.Model):
     location = models.CharField(max_length=100, blank=True)
     birth_date = models.DateField(null=True, blank=True)
     email_subscribed = models.BooleanField(default=False)
+    entity = models.ForeignKey(Entity, on_delete=models.SET_NULL, null=True, blank=True)
     
 
     def __str__(self):

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pending User Requests</title>
+</head>
+<body>
+    <h2>Pending User Requests</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Entity</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in pending_users %}
+                <tr>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.entity }}</td>  <!-- Assuming the entity has a human-readable __str__ representation -->
+                    <td>{{ user.created_at }}</td>
+                    <td>
+                        <form method="post" action="{% url 'approve_registration' user.id %}">
+                            {% csrf_token %}
+                            <button type="submit" name="action" value="confirm">Confirm</button>
+                        </form>
+                        <form method="post" action="{% url 'reject_registration' user.id %}">
+                            {% csrf_token %}
+                            <button type="submit" name="action" value="reject">Reject</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

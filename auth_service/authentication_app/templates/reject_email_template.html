@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Request Rejected</title>
+</head>
+<body>
+    <p>Dear {{ username }},</p>
+    <p>We regret to inform you that your registration request has been rejected. Here are the details:</p>
+    <ul>
+        <li><strong>Username:</strong> {{ username }}</li>
+        <li><strong>Email:</strong> {{ email }}</li>
+        <li><strong>Entity Name:</strong> {{ entity_name }}</li>
+        <li><strong>Entity Location:</strong> {{ entity_location }}</li>
+    </ul>
+    <p>Please feel free to contact us if you have any questions or concerns.</p>
+    <p>Thank you.</p>
+</body>
+</html>

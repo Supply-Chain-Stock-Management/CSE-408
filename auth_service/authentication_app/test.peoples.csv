@@ -1,0 +1,12 @@
+_id,entity_id,type,name,location
+65bd4520cc160bb1d5a2851e,101,factory,ARCS,Tongi
+65bd4520cc160bb1d5a2851f,102,factory,ARCE,Tongi
+65bd4520cc160bb1d5a28520,103,factory,KGF,Chittagong
+65bd4520cc160bb1d5a28521,201,warehouse,Dhaka DC,Dhaka
+65bd4520cc160bb1d5a28522,202,warehouse,Bogra DC,Bogra
+65bd4520cc160bb1d5a28523,203,warehouse,Khulna DC,Khulna
+65bd4520cc160bb1d5a28524,204,warehouse,Barishal DC,Barishal
+65bd4520cc160bb1d5a28525,301,distributor,M/S Jameson Enterprise,Chankharpul
+65bd4520cc160bb1d5a28526,302,distributor,M/S Rony Traders,Faridpur
+65bd4520cc160bb1d5a28527,303,distributor,M/S Ujala Trading,Rajbari
+65bd4520cc160bb1d5a28528,304,distributor,M/S Talukdar Enterprise,Bhola
