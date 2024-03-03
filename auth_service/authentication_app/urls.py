@@ -18,5 +18,6 @@ urlpatterns = [
     path('password-change-done/', views.CustomPasswordChangeDoneView.as_view(), name='password_change_done'),
     path('remove-user/<str:username>/', views.remove_user, name='remove_user'),
     path('register/request_confirm/', views.request_confirm, name='register_request_confirmation'),
+    path('user-info/', views.get_user_info, name='user_info'),
 
 ]

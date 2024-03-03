@@ -334,3 +334,32 @@ class CustomPasswordChangeView(PasswordChangeView):
 class CustomPasswordChangeDoneView(PasswordChangeDoneView):
     def get(self, request, *args, **kwargs):
         return JsonResponse({'message': 'Password change done.'})
+    
+
+
+
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_user_info(request):
+    # Retrieve user information
+    user = request.user
+    user_info = {
+        'user_id': user.id,
+        'entity_id': None,
+        'username': user.username,
+        'is_authenticated': user.is_authenticated,
+    }
+
+    # Check if the user has a profile
+    try:
+        profile = user.profile
+        user_info['entity_id'] = profile.entity.id if profile.entity else None
+    except Profile.DoesNotExist:
+        pass
+
+    # Return user information as JSON response
+    return Response(user_info)

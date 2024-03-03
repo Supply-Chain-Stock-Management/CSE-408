@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'profile_app',
     'permission_app',
     'email_app',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
