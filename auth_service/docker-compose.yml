@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  auth_db:
+    image: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: user_auth_db
+      POSTGRES_USER: auth_user
+      POSTGRES_PASSWORD: password
+      # POSTGRES_PASSWORD: ${AUTH_POSTGRES_PASSWORD}
+
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    # environment:
+      # - EMAIL_HOST_USER: ${EMAIL_HOST_USER}
+      # - EMAIL_HOST_PASSWORD: ${EMAIL_HOST_PASSWORD}
+
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - auth_db
+
+    env_file:
+      - .env
+
+volumes:
+  pgdata:
+
+  
